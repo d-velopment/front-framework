@@ -89,7 +89,7 @@ It includes the bundled JavaScript and a copy of your `public/index.html` and `p
 import { $api } from "../framework/api"
 
 // Client function to be executed in browser
-function helloClient(name: string) {
+const helloClient = (name: string) => {
   console.log("[client] hello,", name)
   return `client says hi to ${name}`
 }
