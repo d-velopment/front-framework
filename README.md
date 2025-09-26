@@ -1,9 +1,10 @@
 # Front-End-based Full-Stack Framework
 
-A lightweight front-end based full-stack framework for building modular applications.  
-This framework provides a simple way to structure, render, and bundle front-end applications with TypeScript as the entry point and HTML as the host.  
-It also lets you seamlessly write both front-end and back-end logic inside `src/index.ts`:  
-all functions marked with `$api` are automatically converted into API endpoints and integrated into the server application.
+A lightweight front-end-based full-stack framework for seamlessly **building both front- and back-end logic inside single** `src/index.ts`.
+
+**Main Feature**: All functions marked with `$api` are automatically converted into API endpoints and built into the server application.
+
+*This framework provides a simple way to structure, render, and bundle front-end applications with TypeScript as the entry point and HTML as the host and, as the result, builds an application into vanilla JS client + server.*
 
 ---
 
@@ -14,6 +15,7 @@ all functions marked with `$api` are automatically converted into API endpoints 
 - **Unified client and server code**: Write both in one place, `$api` functions become server endpoints.
 - **Framework utilities**: Provides a rendering pipeline and modular structure to grow your project.
 - **Build system**: Includes scripts to bundle, copy assets, and prepare for deployment.
+- **SQL support**: TBA.
 
 ---
 
@@ -87,7 +89,7 @@ It includes the bundled JavaScript and a copy of your `public/index.html` and `p
 import { $api } from "../framework/api"
 
 // Client function to be executed in browser
-function helloClient(name: string) {
+const helloClient = (name: string) => {
   console.log("[client] hello,", name)
   return `client says hi to ${name}`
 }
