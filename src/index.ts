@@ -1,7 +1,7 @@
 import { $api } from "../framework/api"
 
 // Client function
-function helloClient(name: string) {
+const helloClient = (name: string) => {
   console.log("[client] hello,", name)
   return `client says hi to ${name}`
 }
